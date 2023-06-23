@@ -14,6 +14,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
+
 import com.exam.myapp.member.MemberVo;
 
 //필터 : 서블릿의 실행 전후에 끼어들어가서 실행
@@ -21,10 +23,11 @@ import com.exam.myapp.member.MemberVo;
 // Filter 인터페이스를 구현하여 필터 클래스 정의
 //web.xml 에 <filter> 태그로 등록하거나, 클래스에 @WebFilter 적용
 
+//다수의 컨트롤러 실행 전후에 수행해야 하는 공통 작업들은 핸들러인터셉터를 사용하여 구현 가능
 
-public class LoginFilter implements Filter{
+public class LoginFilter extends HandlerInterceptorAdapter{
 	private List<String> whiteList = new ArrayList<String>();
-	
+	//로그인 없이 사용가능한 요청경로들을 저장한 목록
 	@Override
 	public void init(FilterConfig filterConfig) throws ServletException {
 			whiteList.add("/member/login.do");
