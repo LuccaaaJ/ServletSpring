@@ -12,7 +12,9 @@
 	<!--로그인이 된 경우  -->
 	<c:if test="${loginUser!=null}">
 		${loginUser.memName}
-		<a href='${pageContext.request.contextPath}/member/logout.do'>로그아웃</a>
+		<a href='${pageContext.request.contextPath}/member/logout.do'>로그아웃</a>|
+		<a href='${pageContext.request.contextPath}/member/list.do'>회원관리</a>|
+		<a href='${pageContext.request.contextPath}/bbs/list.do'>게시판</a>
 	</c:if>
 	
 	<!--로그인이 안된 경우  -->

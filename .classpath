@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry excluding="com/exam/myapp/member/MemAddServlet.java|com/exam/myapp/member/MemEditServlet.java|com/exam/myapp/member/MemDelServlet.java|com/exam/myapp/member/LoginServlet.java|com/exam/myapp/member/LogoutServlet.java" kind="src" output="target/classes" path="src/main/java">
+	<classpathentry excluding="com/exam/myapp/member/MemAddServlet.java|com/exam/myapp/member/MemEditServlet.java|com/exam/myapp/member/MemDelServlet.java|com/exam/myapp/member/LoginServlet.java|com/exam/myapp/member/LogoutServlet.java|com/exam/myapp/member/MemberDaoBatis.java" kind="src" output="target/classes" path="src/main/java">
 		<attributes>
 			<attribute name="optional" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
